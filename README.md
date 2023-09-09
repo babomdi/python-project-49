@@ -6,4 +6,4 @@
 `python3 -m pip install --user git+https://github.com/babomdi/python-project-49.git`
 
 ### Game 1: Is Even?
-[![asciicast](https://asciinema.org/a/607050)
+https://asciinema.org/a/607050
