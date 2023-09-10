@@ -16,6 +16,7 @@ def eng(task, questions_lst, correct_ans_lst):
             if i == 2:
                 print(f'Congratulations, {name}!')
         else:
-            print(f"'{ans}' is wrong answer ;(. Correct answer was '{correct_ans_lst[i]}'.")
+            print(f"'{ans}' is wrong answer ;(. \
+Correct answer was '{correct_ans_lst[i]}'.")
             print(f"Let's try again, {name}!")
             break

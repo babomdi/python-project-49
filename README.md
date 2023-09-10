@@ -13,3 +13,6 @@ https://asciinema.org/a/607186
 
 ### Game 3: What Is The Greatest Common Divisor?
 https://asciinema.org/a/607255
+
+### Game 4: Arithmetic Progression
+https://asciinema.org/a/607259
