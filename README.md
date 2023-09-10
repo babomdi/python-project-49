@@ -7,3 +7,6 @@
 
 ### Game 1: Is Even?
 https://asciinema.org/a/607050
+
+### Game 2: Calculator
+https://asciinema.org/a/607186
