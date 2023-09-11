@@ -11,12 +11,13 @@ def eng(task, questions_lst, correct_ans_lst):
 
         ans = prompt.string('Answer: ')
 
-        if ans == correct_ans_lst[i] and i < 2:
-            print('Correct!')
-        elif ans == correct_ans_lst[i] and i == 2:
-            print(f'Congratulations, {name}!')
-        else:
+        if ans != correct_ans_lst[i]:
             print(f"'{ans}' is wrong answer ;(. \
 Correct answer was '{correct_ans_lst[i]}'.")
             print(f"Let's try again, {name}!")
             break
+        elif ans == correct_ans_lst[i] and i < 2:
+            print('Correct!')
+        else:
+            print('Correct!')
+            print(f'Congratulations, {name}!')

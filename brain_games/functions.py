@@ -26,7 +26,7 @@ def random_calc():
     elif random_oper == '-':
         correct_ans = num1 - num2
     else:
-        correct_ans = str(num1 * num2)
+        correct_ans = num1 * num2
 
     return correct_ans, num1, num2, random_oper
 
@@ -69,15 +69,19 @@ def random_prime():
     from random import randint
 
     num = randint(1, 100)
+    flag = True
 
     for i in range(1, int(num/2)+1):
         if i > 1 and num % i == 0:
-            correct_ans = 'no'
+            flag = False
             break
-        else:
-            correct_ans = 'yes'
 
     if num == 1:
+        flag = False
+
+    if flag is False:
         correct_ans = 'no'
+    else:
+        correct_ans = 'yes'
 
     return correct_ans, num
