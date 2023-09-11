@@ -11,10 +11,10 @@ def eng(task, questions_lst, correct_ans_lst):
 
         ans = prompt.string('Answer: ')
 
-        if ans == correct_ans_lst[i]:
+        if ans == correct_ans_lst[i] and i < 2:
             print('Correct!')
-            if i == 2:
-                print(f'Congratulations, {name}!')
+        elif ans == correct_ans_lst[i] and i == 2:
+            print(f'Congratulations, {name}!')
         else:
             print(f"'{ans}' is wrong answer ;(. \
 Correct answer was '{correct_ans_lst[i]}'.")
