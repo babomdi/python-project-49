@@ -1,17 +1,25 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "brain-games"
 authors = ["babomdi <dasha.ryzhikova@bk.ru>"]
 packages = [
-  { include = "brain_games" },
+    { include = "brain_games" },
 ]
+clasifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment"
+]
+repository = "https://github.com/babomdi/python-project-49"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
