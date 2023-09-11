@@ -71,7 +71,7 @@ def random_prime():
     num = randint(1, 100)
     flag = True
 
-    for i in range(1, int(num/2)+1):
+    for i in range(1, int(num / 2) + 1):
         if i > 1 and num % i == 0:
             flag = False
             break
