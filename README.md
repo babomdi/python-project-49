@@ -16,3 +16,6 @@ https://asciinema.org/a/607255
 
 ### Game 4: Arithmetic Progression
 https://asciinema.org/a/607259
+
+### Game 5: Is Prime?
+https://asciinema.org/a/607326
