@@ -6,7 +6,7 @@ authors = ["babomdi <dasha.ryzhikova@bk.ru>"]
 packages = [
     { include = "brain_games" },
 ]
-clasifiers = [
+classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
