@@ -17,7 +17,7 @@ Correct answer was '{correct_ans_lst[0]}'.")
         print('Correct!')
     else:
         print('Correct!')
-        print('Congratilations, {name}!')
+        print(f'Congratulations, {name}!')
 
     return error
 

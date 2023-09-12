@@ -1,11 +1,12 @@
+from brain_games.engine import eng
+from brain_games.functions import random_calc
+
+
 def calc_logic():
 
-    from brain_games.engine import eng
-    from brain_games.functions import random_calc
-
     task = 'What is the result of the expression?'
-    questions_lst = []
-    correct_ans_lst = []
+    questions_lst = list()
+    correct_ans_lst = list()
 
     for i in range(3):
         correct_ans, num1, num2, oper = random_calc()

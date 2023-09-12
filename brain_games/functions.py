@@ -59,16 +59,16 @@ def random_progression():
     return correct_ans, prog
 
 
-def random_prime():
-
-    num = randint(1, 100)
+def random_prime(num):
 
     if num > 1:
         for i in range(1, int(num / 2) + 1):
             if i > 1 and num % i == 0:
                 correct_ans = 'no'
                 break
+            else:
+                correct_ans = 'yes'
     else:
-        correct_ans = 'yes'
+        correct_ans = 'no'
 
-    return correct_ans, num
+    return correct_ans
