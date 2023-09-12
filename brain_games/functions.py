@@ -1,6 +1,8 @@
-def random_even():
+from random import randint, choice
+from math import gcd
 
-    from random import randint
+
+def random_even():
 
     num = randint(0, 100)
 
@@ -13,8 +15,6 @@ def random_even():
 
 
 def random_calc():
-
-    from random import randint, choice
 
     operators = ['+', '-', '*']
     num1 = randint(0, 100)
@@ -33,9 +33,6 @@ def random_calc():
 
 def random_gcd():
 
-    from random import randint
-    from math import gcd
-
     num1 = randint(1, 100)
     num2 = randint(1, 100)
     correct_ans = str(gcd(num1, num2))
@@ -44,8 +41,6 @@ def random_gcd():
 
 
 def random_progression():
-
-    from random import randint
 
     prog = []
     num = randint(1, 10)
@@ -66,21 +61,13 @@ def random_progression():
 
 def random_prime():
 
-    from random import randint
-
     num = randint(1, 100)
-    flag = True
 
-    for i in range(1, int(num / 2) + 1):
-        if i > 1 and num % i == 0:
-            flag = False
-            break
-
-    if num == 1:
-        flag = False
-
-    if flag is False:
-        correct_ans = 'no'
+    if num > 1:
+        for i in range(1, int(num / 2) + 1):
+            if i > 1 and num % i == 0:
+                correct_ans = 'no'
+                break
     else:
         correct_ans = 'yes'
 
