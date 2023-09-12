@@ -60,12 +60,14 @@ def random_progression():
 
 
 def prime_num_check(num):
+
     for i in range(1, int(num / 2) + 1):
         if i > 1 and num % i == 0:
             correct_ans = 'no'
             break
         else:
             correct_ans = 'yes'
+
     return correct_ans
 
 
