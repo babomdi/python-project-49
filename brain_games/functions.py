@@ -59,15 +59,20 @@ def random_progression():
     return correct_ans, prog
 
 
+def prime_num_check(num):
+    for i in range(1, int(num / 2) + 1):
+        if i > 1 and num % i == 0:
+            correct_ans = 'no'
+            break
+        else:
+            correct_ans = 'yes'
+    return correct_ans
+
+
 def random_prime(num):
 
     if num > 1:
-        for i in range(1, int(num / 2) + 1):
-            if i > 1 and num % i == 0:
-                correct_ans = 'no'
-                break
-            else:
-                correct_ans = 'yes'
+        correct_ans = prime_num_check(num)
     else:
         correct_ans = 'no'
 
