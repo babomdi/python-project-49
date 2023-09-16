@@ -1,16 +1,35 @@
-from brain_games.engine import eng
-from brain_games.functions import random_calc
+from brain_games.engine import run_game
+from random import randint, choice
 
 
-def calc_logic():
+def generate_calc():
+
+    operators = ['+', '-', '*']
+    MIN_VALUE, MAX_VALUE = 0, 100
+    num1 = randint(MIN_VALUE, MAX_VALUE)
+    num2 = randint(MIN_VALUE, MAX_VALUE)
+    random_operator = choice(operators)
+
+    if random_operator == '+':
+        correct_answer = num1 + num2
+    elif random_operator == '-':
+        correct_answer = num1 - num2
+    else:
+        correct_answer = num1 * num2
+
+    return correct_answer, num1, num2, random_operator
+
+
+def run_calc():
 
     task = 'What is the result of the expression?'
-    questions_lst = list()
-    correct_ans_lst = list()
+    questions_list = []
+    correct_answers_list = []
+    ROUNDS = 3
 
-    for i in range(3):
-        correct_ans, num1, num2, oper = random_calc()
-        questions_lst.append(f'{num1} {oper} {num2}')
-        correct_ans_lst.append(str(correct_ans))
+    for i in range(ROUNDS):
+        correct_answer, num1, num2, operator = generate_calc()
+        questions_list.append(f'{num1} {operator} {num2}')
+        correct_answers_list.append(str(correct_answer))
 
-    eng(task, questions_lst, correct_ans_lst)
+    run_game(task, questions_list, correct_answers_list)

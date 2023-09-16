@@ -1,16 +1,28 @@
-from brain_games.engine import eng
-from brain_games.functions import random_gcd
+from brain_games.engine import run_game
+from random import randint
+from math import gcd
 
 
-def gcd_logic():
+def generate_gcd():
+
+    MIN_VALUE, MAX_VALUE = 1, 100
+    num1 = randint(MIN_VALUE, MAX_VALUE)
+    num2 = randint(MIN_VALUE, MAX_VALUE)
+    correct_answer = str(gcd(num1, num2))
+
+    return correct_answer, num1, num2
+
+
+def run_gcd():
 
     task = 'Find the greatest common divisor of given numbers.'
-    questions_lst = list()
-    correct_ans_lst = list()
+    questions_list = []
+    correct_answers_list = []
+    ROUNDS = 3
 
-    for i in range(3):
-        correct_ans, num1, num2 = random_gcd()
-        questions_lst.append(f'{num1} {num2}')
-        correct_ans_lst.append(correct_ans)
+    for i in range(ROUNDS):
+        correct_answer, num1, num2 = generate_gcd()
+        questions_list.append(f'{num1} {num2}')
+        correct_answers_list.append(correct_answer)
 
-    eng(task, questions_lst, correct_ans_lst)
+    run_game(task, questions_list, correct_answers_list)

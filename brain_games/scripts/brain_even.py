@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.games.even import even_logic
+from brain_games.games.even import run_even
 
 
 def main():
-    even_logic()
+    run_even()
 
 
 if __name__ == '__main__':
