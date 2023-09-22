@@ -11,18 +11,19 @@ def is_prime(num):
 
     for i in range(2, int(sqrt(num)) + 1):
         if num % i == 0:
-            correct_answer = 'no'
-        else:
-            correct_answer = 'yes'
+            return False
 
-    return correct_answer
+    return True
 
 
 def generate_prime():
 
     num = randint(MIN_VALUE, MAX_VALUE)
 
-    correct_answer = is_prime(num)
+    if is_prime(num) is False:
+        correct_answer = 'no'
+    else:
+        correct_answer = 'yes'
 
     return correct_answer, num
 
