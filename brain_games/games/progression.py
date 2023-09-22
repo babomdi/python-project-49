@@ -12,6 +12,7 @@ TASK = 'What number is missing in the progression?'
 def get_progression(num, difference):
 
     progression = []
+    progression.append(num)
 
     for i in range(PROGRESSION_LENGTH - 1):
         next_num = num + difference
@@ -23,9 +24,7 @@ def get_progression(num, difference):
 
 def generate_progression():
 
-    progression = []
     num = randint(MIN_VALUE, MAX_VALUE)
-    progression.append(num)
     difference = randint(MIN_DIFFERENCE, MAX_DIFFERENCE)
 
     progression = get_progression(num, difference)
