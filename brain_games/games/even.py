@@ -1,10 +1,13 @@
-from brain_games.engine import run_game
 from random import randint
+
+
+MIN_VALUE, MAX_VALUE = 0, 100
+ROUNDS = 3
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def generate_even():
 
-    MIN_VALUE, MAX_VALUE = 0, 100
     num = randint(MIN_VALUE, MAX_VALUE)
 
     if num % 2 == 0:
@@ -15,16 +18,14 @@ def generate_even():
     return correct_answer, num
 
 
-def run_even():
+def get_questions_and_answers():
 
-    task = 'Answer "yes" if the number is even, otherwise answer "no".'
     questions_list = []
     correct_answers_list = []
-    ROUNDS = 3
 
     for i in range(ROUNDS):
         correct_answer, num = generate_even()
         questions_list.append(num)
         correct_answers_list.append(correct_answer)
 
-    run_game(task, questions_list, correct_answers_list)
+    return questions_list, correct_answers_list

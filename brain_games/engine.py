@@ -2,12 +2,15 @@ from brain_games.cli import welcome_user
 import prompt
 
 
-def run_game(task, questions_list, correct_answers_list):
+ROUNDS = 3
 
+
+def run_game(task, get_questions_and_answers):
+
+    questions_list, correct_answers_list = get_questions_and_answers()
     name = welcome_user()
     print(task)
 
-    ROUNDS = 3
     for i in range(ROUNDS):
         print(f'Question: {questions_list[0]}')
         answer = prompt.string('Answer: ')

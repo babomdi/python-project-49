@@ -1,14 +1,13 @@
-from brain_games.engine import run_game
 from random import randint, choice
 
 
-def generate_calc():
+MIN_VALUE, MAX_VALUE = 0, 100
+ROUNDS = 3
+OPERATORS = ('+', '-', '*')
+TASK = 'What is the result of the expression?'
 
-    operators = ['+', '-', '*']
-    MIN_VALUE, MAX_VALUE = 0, 100
-    num1 = randint(MIN_VALUE, MAX_VALUE)
-    num2 = randint(MIN_VALUE, MAX_VALUE)
-    random_operator = choice(operators)
+
+def get_correct_answer(random_operator, num1, num2):
 
     if random_operator == '+':
         correct_answer = num1 + num2
@@ -17,19 +16,28 @@ def generate_calc():
     else:
         correct_answer = num1 * num2
 
+    return correct_answer
+
+
+def generate_calc():
+
+    num1 = randint(MIN_VALUE, MAX_VALUE)
+    num2 = randint(MIN_VALUE, MAX_VALUE)
+    random_operator = choice(OPERATORS)
+
+    correct_answer = get_correct_answer(random_operator, num1, num2)
+
     return correct_answer, num1, num2, random_operator
 
 
-def run_calc():
+def get_questions_and_answers():
 
-    task = 'What is the result of the expression?'
     questions_list = []
     correct_answers_list = []
-    ROUNDS = 3
 
     for i in range(ROUNDS):
         correct_answer, num1, num2, operator = generate_calc()
         questions_list.append(f'{num1} {operator} {num2}')
         correct_answers_list.append(str(correct_answer))
 
-    run_game(task, questions_list, correct_answers_list)
+    return questions_list, correct_answers_list
