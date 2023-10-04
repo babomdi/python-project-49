@@ -19,10 +19,6 @@ def generate_prime():
 
     num = randint(MIN_VALUE, MAX_VALUE)
     question = num
-
-    if is_prime(num) is False:
-        correct_answer = 'no'
-    else:
-        correct_answer = 'yes'
+    correct_answer = 'yes' if is_prime(num) else 'no'
 
     return question, correct_answer

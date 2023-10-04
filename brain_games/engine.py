@@ -16,13 +16,10 @@ def run_game(task, get_question_and_answer):
         answer = prompt.string('Answer: ')
         correct_answer = correct_answer
 
-        if answer != correct_answer:
-            print(f"'{answer}' is wrong answer ;(. \
-Correct answer was '{correct_answer}'.")
+        if answer.lower() != correct_answer:
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
-            break
-        elif answer == correct_answer and i < 2:
-            print('Correct!')
-        else:
-            print('Correct!')
-            print(f'Congratulations, {name}!')
+            return
+        print('Correct!')
+    print(f'Congratulations, {name}!')

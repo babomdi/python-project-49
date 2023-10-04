@@ -18,9 +18,6 @@ def generate_even():
     num = randint(MIN_VALUE, MAX_VALUE)
     question = num
 
-    if is_even(num):
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
+    correct_answer = 'yes' if is_even(num) else 'no'
 
     return question, correct_answer
